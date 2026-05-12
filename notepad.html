@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduPulse | Notepad</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo" onclick="location.href='index.html'">Edu<span>Pulse</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="flashcards.html">Flashcards</a>
+      <a href="notepad.html" class="active">Notepad</a>
+      <a href="about.html">About</a>
+      <button id="theme-btn" class="btn-primary" aria-label="Toggle theme">🌙</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="glass-card">
+      <h2 class="gradient-text">Sticky Notes</h2>
+      <div class="input-row">
+        <input type="text" id="note-text" placeholder="Write a note..."/>
+        <select id="note-color">
+          <option value="#FFD166">Sun</option>
+          <option value="#06D6A0">Mint</option>
+          <option value="#118AB2">Ocean</option>
+          <option value="#EF476F">Rose</option>
+        </select>
+        <button class="btn-primary" id="add-note">Add Note</button>
+      </div>
+    </section>
+
+    <section id="notes-board" class="notes-board relaxed-gap"></section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

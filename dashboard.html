@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduPulse | Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+</head>
+<body class="dashboard-bg">
+  <nav class="navbar">
+    <div class="logo" onclick="location.href='index.html'">Edu<span>Pulse</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="flashcards.html">Flashcards</a>
+      <a href="notepad.html">Notepad</a>
+      <a href="about.html">About</a>
+      <button id="theme-btn" class="btn-primary" aria-label="Toggle theme">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Hero uses home-hero.jpg via CSS -->
+  <header class="hero hero-dashboard">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="gradient-text">Your Learning Hub</h1>
+      <p>Track XP, level up, and keep your daily streak alive.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats-bar">
+      <div class="mini-stat-card">XP: <span id="stat-xp">0</span></div>
+      <div class="mini-stat-card">Level: <span id="stat-level">1</span></div>
+      <div class="mini-stat-card">Daily streak: <span id="stat-streak">0</span></div>
+    </section>
+
+    <section class="dashboard-grid">
+      <a class="feature-card" href="quiz.html" data-click-sound>
+        <div class="card-icon">🎯</div>
+        <h2>Quiz</h2>
+        <p>Challenge yourself and level up your skills.</p>
+      </a>
+      <a class="feature-card" href="flashcards.html" data-click-sound>
+        <div class="card-icon">⚡</div>
+        <h2>Flashcards</h2>
+        <p>Master concepts with custom study sets.</p>
+      </a>
+      <a class="feature-card" href="notepad.html" data-click-sound>
+        <div class="card-icon">🗒️</div>
+        <h2>Notepad</h2>
+        <p>Capture ideas and stay organized.</p>
+      </a>
+      <a class="feature-card" href="about.html" data-click-sound>
+        <div class="card-icon">💡</div>
+        <h2>About</h2>
+        <p>Mission, vision, and community.</p>
+      </a>
+    </section>
+  </main>
+
+  <!-- Chatbot: hidden until FAB click -->
+  <button id="chat-fab" class="chat-fab" aria-label="Open chat">💬</button>
+  <aside class="chatbot-container hidden" id="chatbot">
+    <div class="chat-header">
+      <span>EduBot AI</span>
+      <button class="btn-primary btn-xs" id="chat-close" aria-label="Close chat">✕</button>
+    </div>
+    <div id="chat-messages" class="chat-messages"></div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Ask: Joke, Tip, Fact, Help"/>
+      <button class="btn-primary" id="chat-send">Send</button>
+    </div>
+  </aside>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

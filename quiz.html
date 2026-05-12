@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduPulse | Quiz</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo" onclick="location.href='index.html'">Edu<span>Pulse</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="quiz.html" class="active">Quiz</a>
+      <a href="flashcards.html">Flashcards</a>
+      <a href="notepad.html">Notepad</a>
+      <a href="about.html">About</a>
+      <button id="theme-btn" class="btn-primary" aria-label="Toggle theme">🌙</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="glass-card quiz-card">
+      <div id="quiz-start">
+        <h1 class="gradient-text">Quiz Arena</h1>
+        <p>Select a topic and begin your challenge.</p>
+        <div class="input-row">
+          <div class="input-group">
+            <label>Topic</label>
+            <select id="quiz-topic">
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="js">JavaScript</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Difficulty</label>
+            <select id="quiz-difficulty">
+              <option value="easy">Easy (10 XP)</option>
+              <option value="medium">Medium (20 XP)</option>
+              <option value="hard">Hard (30 XP)</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn-primary" id="quiz-begin">Begin</button>
+      </div>
+
+      <div class="hidden" id="quiz-body">
+        <div class="quiz-top">
+          <span id="question-count" class="pill">Question 1/10</span>
+          <span class="pill">⏱ <span id="quiz-timer">10:00</span></span>
+        </div>
+        <h2 id="question-text"></h2>
+        <div id="options-container" class="options-grid"></div>
+      </div>
+
+      <div class="hidden quiz-result" id="quiz-result">
+        <canvas id="confetti-canvas"></canvas>
+        <div class="card-icon">🏆</div>
+        <h2 class="gradient-text">Mission Complete</h2>
+        <p id="final-score"></p>
+        <p id="performance-msg"></p>
+        <div class="actions">
+          <a class="btn-primary" href="quiz.html">Retry</a>
+          <a class="btn-primary outline" href="dashboard.html">Back to Dashboard</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/confetti.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
