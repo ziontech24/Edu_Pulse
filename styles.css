@@ -51,7 +51,7 @@ body { background: var(--bg); color: var(--text); overflow-x: hidden; }
   text-align: center;
 }
 .hero-dashboard {
-  background: url('../assets/home-hero.jpg') center/cover no-repeat fixed;
+  background: url('home-hero.jpg') center/cover no-repeat fixed;
   min-height: 60vh;
 }
 .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.45); }
